@@ -65,7 +65,7 @@ void main_task(void *pvArgs)
 
 #if USE_FREERTOS_TCP_STACK
 	extern void app_main(void);
-	//app_main();
+	app_main();
 #endif /* USE_FREERTOS_TCP_STACK */
 
 #if BASIC_SYS_TEST_DEMO
@@ -74,7 +74,7 @@ void main_task(void *pvArgs)
 		LED0 = !LED0;
 		vTaskDelay(pdMS_TO_TICKS(100));
 		//R_BSP_SoftwareDelay(100, BSP_DELAY_MILLISECS); /* Example use of busy delay */
-		configPRINTF(("Print test: %u\n\r", uxCounter++));
+		//configPRINTF(("Print test: %u\n\r", uxCounter++));
 	}
 #endif /* BASIC_SYS_TEST_DEMO */
 

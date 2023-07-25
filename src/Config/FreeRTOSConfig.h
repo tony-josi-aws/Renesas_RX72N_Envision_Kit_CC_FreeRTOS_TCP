@@ -135,12 +135,12 @@ required to ensure flase positive timing errors are not reported. */
  *-----------------------------------------------------------*/
 
 /* MAC address configuration. */
-#define configMAC_ADDR0	0x01
-#define configMAC_ADDR1	0x12
-#define configMAC_ADDR2	0x13
-#define configMAC_ADDR3	0x10
-#define configMAC_ADDR4	0x15
-#define configMAC_ADDR5	0x11
+#define configMAC_ADDR0                      0x00
+#define configMAC_ADDR1                      0x11
+#define configMAC_ADDR2                      0x22
+#define configMAC_ADDR3                      0x33
+#define configMAC_ADDR4                      0x44
+#define configMAC_ADDR5                      0x32
 
 /* IP address configuration. */
 #define configIP_ADDR0		192

@@ -44,6 +44,15 @@
 			</matcher>
 		</filter>
 		<filter>
+			<id>1690266507286</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-source</arguments>
+			</matcher>
+		</filter>
+		<filter>
 			<id>1690255647332</id>
 			<name>src/Libraries/FreeRTOS-Kernel/portable</name>
 			<type>9</type>
@@ -77,6 +86,51 @@
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-RX700v3_DPFPU</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690269906002</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/source/portable/BufferManagement</name>
+			<type>5</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-BufferAllocation_2.c</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690266547168</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/source/portable/Compiler</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-Renesas</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690266583444</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/source/portable/NetworkInterface</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-Common</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690266583458</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/source/portable/NetworkInterface</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-include</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690266583472</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/source/portable/NetworkInterface</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-RX</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>

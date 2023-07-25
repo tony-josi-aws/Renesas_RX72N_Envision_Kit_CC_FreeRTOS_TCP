@@ -51,9 +51,9 @@ extern BaseType_t xApplicationMemoryPermissions( uint32_t aAddress );
 extern void vOutputChar( const char cChar,
                          const TickType_t xTicksToWait );
 
-#ifdef __GNUC__
+#if 1
 
-    __attribute__( ( weak ) ) BaseType_t xApplicationMemoryPermissions( uint32_t aAddress )
+    BaseType_t xApplicationMemoryPermissions( uint32_t aAddress )
     {
         ( void ) aAddress;
         /* Return 1 for readable, 2 for writable, 3 for both. */
@@ -61,7 +61,7 @@ extern void vOutputChar( const char cChar,
     }
 
 
-    __attribute__( ( weak ) ) void vOutputChar( const char cChar,
+    void vOutputChar( const char cChar,
                                                 const TickType_t xTicksToWait )
     {
         ( void ) cChar;
