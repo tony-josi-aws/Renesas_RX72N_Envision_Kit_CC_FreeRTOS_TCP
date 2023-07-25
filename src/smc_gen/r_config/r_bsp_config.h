@@ -669,7 +669,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
    4 = Renesas ITRON OS (RI600V4 or RI600PX) is used.
    5 = Azure RTOS is used.
 */
-#define BSP_CFG_RTOS_USED               (0)
+#define BSP_CFG_RTOS_USED               (1)
 
 /* This macro is used to select which Renesas ITRON OS.
    0 = RI600V4 is used.

@@ -9,7 +9,6 @@
         <Setting id="P80" value="ET0_TX_EN"/>
         <Setting id="P83" value="ET0_CRS"/>
         <Setting id="P82" value="ET0_ETXD1"/>
-        <Setting id="P40" value="P40"/>
         <Setting id="MD" value="FINED"/>
         <Setting id="PC0" value="ET0_ERXD3"/>
         <Setting id="PC2" value="ET0_RX_DV"/>

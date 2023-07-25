@@ -601,7 +601,6 @@
         <pinItem allocation="16" comments="" direction="None" id="FINED" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="70" comments="" direction="None" id="ET0_RX_DV" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="141" comments="" direction="None" id="P40" isUsedBySoftware="false" locked="false" operationMode="" status="4"/>
         <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="62" comments="" direction="None" id="ET0_ETXD2" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="63" comments="" direction="None" id="ET0_ETXD1" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
@@ -1085,7 +1084,7 @@
                 <gridItem id="SCI_CFG_CH10_RX_BUFSIZ" selectedIndex="80"/>
                 <gridItem id="SCI_CFG_CH11_RX_BUFSIZ" selectedIndex="80"/>
                 <gridItem id="SCI_CFG_CH12_RX_BUFSIZ" selectedIndex="80"/>
-                <gridItem id="SCI_CFG_TEI_INCLUDED" selectedIndex="0"/>
+                <gridItem id="SCI_CFG_TEI_INCLUDED" selectedIndex="1"/>
                 <gridItem id="SCI_CFG_ERI_TEI_PRIORITY" selectedIndex="3"/>
                 <gridItem id="SCI_CFG_CH7_FIFO_INCLUDED" selectedIndex="0"/>
                 <gridItem id="SCI_CFG_CH8_FIFO_INCLUDED" selectedIndex="0"/>
