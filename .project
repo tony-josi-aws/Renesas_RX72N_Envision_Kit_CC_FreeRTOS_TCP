@@ -44,12 +44,21 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1690266507286</id>
+			<id>1690345047150</id>
 			<name>src/Libraries/FreeRTOS-Plus-TCP</name>
 			<type>9</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-source</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690345047187</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-tools</arguments>
 			</matcher>
 		</filter>
 		<filter>
@@ -71,6 +80,15 @@
 			</matcher>
 		</filter>
 		<filter>
+			<id>1690345338289</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/tools</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-tcp_utilities</arguments>
+			</matcher>
+		</filter>
+		<filter>
 			<id>1690255687886</id>
 			<name>src/Libraries/FreeRTOS-Kernel/portable/MemMang</name>
 			<type>5</type>
@@ -86,6 +104,33 @@
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-RX700v3_DPFPU</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690345396184</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/tools/tcp_utilities</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-include</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690345396203</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/tools/tcp_utilities</name>
+			<type>5</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-NTPDemo.c</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1690345396221</id>
+			<name>src/Libraries/FreeRTOS-Plus-TCP/tools/tcp_utilities</name>
+			<type>5</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-plus_tcp_demo_cli.c</arguments>
 			</matcher>
 		</filter>
 		<filter>

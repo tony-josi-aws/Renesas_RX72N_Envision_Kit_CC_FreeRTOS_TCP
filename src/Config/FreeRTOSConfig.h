@@ -167,4 +167,11 @@ extern void vPrintStringToUart( const char *str );
 #define configPRINT_STRING( x )                 vPrintStringToUart( x )
 #define configLOGGING_MAX_MESSAGE_LENGTH        512
 
+/* CLI related configurations. */
+#define configCLI_SERVER_PORT                   1234
+#define configMAX_COMMAND_INPUT_SIZE            128
+#define configCOMMAND_INT_MAX_OUTPUT_SIZE       1024
+
+typedef uint32_t time_t;
+
 #endif /* FREERTOS_CONFIG_H */

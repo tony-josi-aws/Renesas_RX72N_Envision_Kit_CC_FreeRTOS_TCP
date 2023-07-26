@@ -67,7 +67,7 @@ R_BSP_InterruptsEnable();
     if( SCI_EVT_RX_CHAR == pxArgs->event || SCI_EVT_RXBUF_OVFL == pxArgs->event )
     {
         BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-
+#if 0
         configASSERT( xRxQueue );
 
         /* Characters received from the UART are stored in this queue, ready to be
@@ -80,6 +80,7 @@ R_BSP_InterruptsEnable();
         /* See http://www.freertos.org/xQueueOverwriteFromISR.html for information
         on the semantics of this ISR. */
         portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+#endif
     }
     /* Renesas API notifies the completion of transmission by SCI_EVT_TEI event. */
     else if( SCI_EVT_TEI == pxArgs->event )
@@ -195,7 +196,7 @@ void vSerialPutString( xComPortHandle pxPort, const signed char * const pcString
     ( void ) pxPort;
 
     /* Don't send the string unless the previous string has been sent. */
-    if( ( xSendingTask == NULL ) && ( usStringLength > 0 ) )
+    if( ( usStringLength > 0 ) )
     {
         /* Ensure the calling task's notification state is not already
         pending. */

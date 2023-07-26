@@ -68,9 +68,14 @@
               </Category>
             </Category>
           </Category>
+          <Category Name="FreeRTOS-Plus-CLI">
+            <Path>src\Libraries\FreeRTOS-Plus-CLI\FreeRTOS_CLI.c</Path>
+            <Path>src\Libraries\FreeRTOS-Plus-CLI\FreeRTOS_CLI.h</Path>
+          </Category>
           <Category Name="FreeRTOS-Plus-TCP">
             <Path>src\Libraries\FreeRTOS-Plus-TCP\CMakeLists.txt</Path>
             <Path>src\Libraries\FreeRTOS-Plus-TCP\History.txt</Path>
+            <Path>src\Libraries\FreeRTOS-Plus-TCP\lexicon.txt</Path>
             <Path>src\Libraries\FreeRTOS-Plus-TCP\readme.txt</Path>
             <Category Name="source">
               <Path>src\Libraries\FreeRTOS-Plus-TCP\source\CMakeLists.txt</Path>
@@ -186,6 +191,23 @@
                 </Category>
               </Category>
             </Category>
+            <Category Name="tools">
+              <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\CMakeLists.txt</Path>
+              <Category Name="tcp_utilities">
+                <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\NTPDemo.c</Path>
+                <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\plus_tcp_demo_cli.c</Path>
+                <Category Name="include">
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\NTPDemo.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\date_and_time.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\http_client_test.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\ntpClient.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\plus_tcp_demo_cli.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\tcp_dump_packets.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\tcp_mem_stats.h</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include\tcp_netstat.h</Path>
+                </Category>
+              </Category>
+            </Category>
           </Category>
           <Category Name="Logging">
             <Path>src\Libraries\Logging\demo_specific_io.h</Path>
@@ -194,6 +216,10 @@
             <Path>src\Libraries\Logging\printf-stdarg.c</Path>
             <Path>src\Libraries\Logging\serial.c</Path>
             <Path>src\Libraries\Logging\serial.h</Path>
+          </Category>
+          <Category Name="UserCommands">
+            <Path>src\Libraries\UserCommands\user_commands.c</Path>
+            <Path>src\Libraries\UserCommands\user_commands.h</Path>
           </Category>
         </Category>
         <Category Name="frtos_startup">
@@ -1340,6 +1366,8 @@
           <Option>-include="${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\source\portable\Compiler\Renesas"</Option>
           <Option>-include="${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\source\include"</Option>
           <Option>-include="${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\source\portable\NetworkInterface\include"</Option>
+          <Option>-include="${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include"</Option>
+          <Option>-include="${ProjDirPath}\src\Libraries\FreeRTOS-Plus-CLI"</Option>
           <Option>-asmopt=-bank</Option>
           <Option>-utf8</Option>
           <Option>-nomessage</Option>
@@ -1412,6 +1440,7 @@
           <Path>HardwareDebug\stream_buffer.obj</Path>
           <Path>HardwareDebug\tasks.obj</Path>
           <Path>HardwareDebug\timers.obj</Path>
+          <Path>HardwareDebug\FreeRTOS_CLI.obj</Path>
           <Path>HardwareDebug\FreeRTOS_ARP.obj</Path>
           <Path>HardwareDebug\FreeRTOS_BitConfig.obj</Path>
           <Path>HardwareDebug\FreeRTOS_DHCP.obj</Path>
@@ -1458,9 +1487,11 @@
           <Path>HardwareDebug\phyHandling.obj</Path>
           <Path>HardwareDebug\NetworkInterface.obj</Path>
           <Path>HardwareDebug\ether_callback.obj</Path>
+          <Path>HardwareDebug\plus_tcp_demo_cli.obj</Path>
           <Path>HardwareDebug\logging.obj</Path>
           <Path>HardwareDebug\printf-stdarg.obj</Path>
           <Path>HardwareDebug\serial.obj</Path>
+          <Path>HardwareDebug\user_commands.obj</Path>
           <Path>HardwareDebug\Renesas_RX72N_Envision_Kit_CC_FreeRTOS_TCP.obj</Path>
           <Path>HardwareDebug\freertos_object_init.obj</Path>
           <Path>HardwareDebug\freertos_start.obj</Path>
@@ -1505,6 +1536,7 @@
           <Path>HardwareDebug\r_sci_rx72n_data.obj</Path>
           <Path>HardwareDebug\Renesas_RX72N_Envision_Kit_CC_FreeRTOS_TCP.lib</Path>
         </LinkOrder>
+        <NoTargetFile Target="src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\NTPDemo.c"/>
         <NoTargetFile Target="trash\2023-07-25-10-09-21\src\smc_gen\general\r_cg_hardware_setup.c"/>
         <NoTargetFile Target="trash\2023-07-25-10-09-21\src\smc_gen\general\r_smc_cgc.c"/>
         <NoTargetFile Target="trash\2023-07-25-10-09-21\src\smc_gen\general\r_smc_cgc_user.c"/>
@@ -1722,6 +1754,8 @@
           <IncludePathForC>"${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\source\portable\Compiler\Renesas"</IncludePathForC>
           <IncludePathForC>"${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\source\include"</IncludePathForC>
           <IncludePathForC>"${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\source\portable\NetworkInterface\include"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\Libraries\FreeRTOS-Plus-TCP\tools\tcp_utilities\include"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\Libraries\FreeRTOS-Plus-CLI"</IncludePathForC>
           <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\general"</IncludePathForAsm>
           <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForAsm>
           <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForAsm>

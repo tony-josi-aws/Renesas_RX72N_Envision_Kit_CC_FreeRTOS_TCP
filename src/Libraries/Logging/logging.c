@@ -156,6 +156,8 @@ static void prvLoggingTask( void * pvParameters )
         {
             configPRINT_STRING( pcReceivedString );
 
+            vTaskDelay(pdMS_TO_TICKS(10));
+
             vPortFree( ( void * ) pcReceivedString );
         }
     }

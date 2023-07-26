@@ -34,8 +34,8 @@ void main(void);
 
 /* Logging module configuration. */
 #define mainLOGGING_TASK_STACK_SIZE         256
-#define mainLOGGING_TASK_PRIORITY           (tskIDLE_PRIORITY + 1)
-#define mainLOGGING_QUEUE_LENGTH            100
+#define mainLOGGING_TASK_PRIORITY           (tskIDLE_PRIORITY)
+#define mainLOGGING_QUEUE_LENGTH            200
 
 /* Board Support Data Structures. */
 sci_hdl_t xSerialSciHandle;
