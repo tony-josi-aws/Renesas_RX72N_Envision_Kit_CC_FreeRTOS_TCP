@@ -166,7 +166,7 @@
               <Category Name="portable">
                 <Path>src\Libraries\FreeRTOS-Plus-TCP\source\portable\CMakeLists.txt</Path>
                 <Category Name="BufferManagement">
-                  <Path>src\Libraries\FreeRTOS-Plus-TCP\source\portable\BufferManagement\BufferAllocation_2.c</Path>
+                  <Path>src\Libraries\FreeRTOS-Plus-TCP\source\portable\BufferManagement\BufferAllocation_1.c</Path>
                 </Category>
                 <Category Name="Compiler">
                   <Category Name="Renesas">
@@ -1483,7 +1483,7 @@
           <Path>HardwareDebug\FreeRTOS_UDP_IP.obj</Path>
           <Path>HardwareDebug\FreeRTOS_UDP_IPv4.obj</Path>
           <Path>HardwareDebug\FreeRTOS_UDP_IPv6.obj</Path>
-          <Path>HardwareDebug\BufferAllocation_2.obj</Path>
+          <Path>HardwareDebug\BufferAllocation_1.obj</Path>
           <Path>HardwareDebug\phyHandling.obj</Path>
           <Path>HardwareDebug\NetworkInterface.obj</Path>
           <Path>HardwareDebug\ether_callback.obj</Path>

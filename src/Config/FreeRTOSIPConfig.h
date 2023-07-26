@@ -322,7 +322,7 @@ extern void vLoggingPrintf( const char * pcFormat, ... );
 1 then FreeRTOS_debug_printf should be defined to the function used to print
 out the debugging messages. */
 #ifndef ipconfigHAS_DEBUG_PRINTF
-    #define ipconfigHAS_DEBUG_PRINTF                    1
+    #define ipconfigHAS_DEBUG_PRINTF                    0
 #endif
 
 #if( ipconfigHAS_DEBUG_PRINTF == 1 )
