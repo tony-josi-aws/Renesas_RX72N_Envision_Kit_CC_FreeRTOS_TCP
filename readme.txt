@@ -41,4 +41,6 @@ RX70N Setup
       for the setting in SCFG suggests to use value 1 for RX72N devices 
       (0 = The access of the register of PHY uses ETHER0, 1 = The access of the register of PHY uses ETHER1),
       use 0 (tested with RX72N Envision Kit)
-
+    • Link status detection by interrupt pin should be disabled
+    • Use Microchip KSZ8041 PHY on RX72N Envision Kit
+    • ETH - PHY interface is MII for RX72N Envision Kit
