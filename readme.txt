@@ -30,6 +30,15 @@ RX70N Setup
         git submodule in src\Libraries\FreeRTOS-Kernel
         ○ Initialisation of FreeRTOS Kernel and hooks are taken from other Renesas Demos / FreeRTOS Demos.
     • If using UART (r_sci_rx), with the logging library from FreeRTOS demo (serial.c) make sure to
-    enable  ENABLE TRANSMIT END INTERRUPT (ASYNCHRONOUS) interrupt in the r_sci_rx component
-    setting in the scfg.
+      enable  ENABLE TRANSMIT END INTERRUPT (ASYNCHRONOUS) interrupt in the r_sci_rx component
+      setting in the scfg.
+    • If there is linker error which says B section overlapping in which another variable
+      assign the following 3 sections to the extensive RAM area in 0x00800000:
+        ○ B_ETHERNET_BUFFERS_1
+        ○ B_RX_DESC_1
+        ○ B_TX_DESC_1
+    • For the 'The register bus of PHY0/1 for ETHER0/1 select' setting in SCFG, though the notes
+      for the setting in SCFG suggests to use value 1 for RX72N devices 
+      (0 = The access of the register of PHY uses ETHER0, 1 = The access of the register of PHY uses ETHER1),
+      use 0 (tested with RX72N Envision Kit)
 
